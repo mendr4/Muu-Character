@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left, rgb(233, 213, 255), rgb(199, 210, 254));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.oval {
+    height: 80px;
+    width: 200px;
+    background-color: #f8f0f8;
+    border-radius: 50%;
+  }
+ 
+.head1 {
+    width: 300px;
+    height: 190px;
+    background-color: #f8f0f8;
+    border-radius: 100%;
+}
+
+.shapes{
+    display: flex;
+    justify-content: space-around;
+}
+
+.shapes>div{
+    width: 230px;
+    height: 200px;
+    background:#c183c1;
+    margin-right: -214px;
+    margin-top: -120px;
+  }
+
+.example3{
+    border-radius: 49% 51% 52% 48%  / 62% 62% 38% 38%; 
+}
