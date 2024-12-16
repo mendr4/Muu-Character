@@ -17,22 +17,25 @@ body {
 }
 
 .home-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    position: static;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    overflow: overflow;
 }
 
 .home-path {
     fill: #FFFFFF;
     opacity: 1;
-    /*stroke: #000000;
-    stroke-width: 2;*/
 }
 
 .home-icon {
-    width: 100%;
-    height: 100%;
-    margin: 0.2px;
+    width: 300px;
+    height: 300px;
+    overflow: visible;
+    object-fit: contain;
     filter: drop-shadow(0 0 6px rgba(73, 19, 235, 0.5));  
 }
 

@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to left, rgb(233, 213, 255), rgb(199, 210, 254));
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E49BDB; 
+    border-radius: 50px; 
+    width: 100%; 
+    height: 80px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding-left: 16px;
+    filter: drop-shadow(0 0 6px rgba(73, 19, 235, 0.5));
+}
+
+.navbar a {
+    text-shadow: 0 0 6px rgba(73, 19, 235, 0.5);
+}
+
+/* Individual nav item (buttons) */
+.nav-item {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    border-radius: 50px;
+    padding: 16px 1px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 30px; 
+}
+
+.nav-item.active {
+    background-color: #E49BDB;
+    color: white;
+}
+
+.nav-item:hover {
+    background-image: linear-gradient(to left, rgb(233, 213, 255), rgb(199, 210, 254));
+}
+
+.home-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+.home-path {
+    fill: #FFFFFF;
+    opacity: 1;
+}
+
+.home-icon {
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+    filter: drop-shadow(0 0 6px rgba(73, 19, 235, 0.5)); 
+}
+
+#house {
+    position: relative;
+    z-index: 1;
+}
+
+#door {
+    position: relative;
+    z-index: 2;
+    fill: url(#background-gradient);
+}
+
+#doorknob {
+    position: relative;
+    z-index: 3;
+    fill: white;
+}
+
+.nav-item:hover #door, 
+.nav-item:hover #doorknob {
+    opacity: 0;
+}
+
+#heart {
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+    fill: url(#background-gradient);
+}
+
+.nav-item:hover #heart {
+    opacity: 1;
+}
+
+
+.heart {
+    animation: none;
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+#first-heart, #second-heart, #third-heart {
+    opacity: 0;
+}
+
+.nav-item:hover #first-heart {
+    animation: chimneyHeart 2s ease 0.1s forwards;
+}
+
+.nav-item:hover #second-heart {
+    animation: chimneyHeart 2s ease 0.7s forwards;
+}
+
+.nav-item:hover #third-heart {
+    animation: chimneyHeart 2s ease 1.3s forwards;
+}
+
+@keyframes chimneyHeart{
+    0% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-50px) scale(0.8);
+        opacity: 0;
+    }
+}
